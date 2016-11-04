@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="file:///G|/红岩/results/20161031/calculator。css.css"
+<title>calculator</title>
+<script>
+	var str; 
+	function add(nums) {
+		str=document.getElementById("out");
+		str.value+=nums.value; 
+		} 
+	function clearall() { 
+		document.getElementById("out").value="";  
+		} 
+	function result() { 
+		str = document.getElementById("out"); 
+		str.value = eval(str.value);  
+} 
+function backspace()
+{
+		var txt = document.getElementById('out');
+		txt.value = txt.value.substring(0,txt.value.length - 1);
+}
+</script>
+</head>
+
+<body>
+	<div class="background">
+    	<h3 class="look">杨斌的计算器</h3>
+	<input type="text"  class="size" id="out"/>
+    <ul id="mos">
+    	<li><input type="button" onclick="add(this)" value="7" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="8" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="9" class="sizen" /></li>
+        <li><input type="button" onclick="backspace()" value="←" class="sizesym" /></li>
+        <li><input type="button" onclick="clearall()" value="C" class="sizec" /></li>
+    </ul>
+    <ul id="mos">
+    	<li><input type="button" onclick="add(this)" value="4" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="5" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="6" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="+" class="sizesym" /></li>
+        <li><input type="button" onclick="add(this)" value="-" class="sizesym" /></li>
+    </ul>
+    <ul id="mos">
+    	<li><input type="button" onclick="add(this)" value="1" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="2" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="3" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="*" class="sizesym" /></li>
+        <li><input type="button" onclick="add(this)" value="/" class="sizesym" /></li>
+    </ul>
+    <ul id="mos">
+    	<li><input type="button" onclick="add(this)" value="0" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="00" class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="." class="sizen" /></li>
+        <li><input type="button" onclick="add(this)" value="%" class="sizesym" /></li>
+        <li><input type="button" onclick="result()" value="=" class="sizesym"/></li>
+    </ul>
+    </div>
+</body>
+</html>
